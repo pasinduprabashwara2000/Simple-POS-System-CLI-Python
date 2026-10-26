@@ -19,15 +19,11 @@ def pos_menu():
             print("Please enter a valid number")
             continue
 
-        if menu_choice == 1:
-            customer_management()
-        elif menu_choice == 2:
-            product_management()
-        elif menu_choice == 3:
-            print("Program Closed")
-            break
-        else:
-            print("Invalid Choice")
+        match menu_choice :
+            case 1 :
+                customer_management()
+            case 2 :
+                product_management()
 
 #Product Management
 def product_management() :
@@ -111,22 +107,19 @@ def customer_management():
             print("Please enter a valid number")
             continue
 
-        if choice == 1:
-            create_customer()
-        elif choice == 2:
-            update_customer()
-        elif choice == 3:
-            delete_customer()
-        elif choice == 4:
-            read_customer()
-        elif choice == 5:
-            read_all_customers()
-        elif choice == 6:
-            customer_summary()
-        elif choice == 7:
-            break
-        else:
-            print("Invalid Choice")
+        match choice :
+            case 1 :
+                create_customer()
+            case 2 :
+                update_customer()
+            case 3 :
+                delete_customer()
+            case 4 :
+                read_customer()
+            case 5 :
+                read_all_customers()
+            case 6 :
+                customer_summary()
 
 def create_customer():
     print("=====================")
